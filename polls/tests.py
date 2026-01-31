@@ -23,7 +23,7 @@ class StaffFullFlowTests(StaticLiveServerTestCase):
     def setUpClass(cls):
         super().setUpClass()
         opts = Options()
-        # opts.add_argument("--headless")  # activar en CI
+        opts.add_argument("--headless")  # activar en CI
         cls.selenium = WebDriver(options=opts)
         cls.selenium.implicitly_wait(10)
 
